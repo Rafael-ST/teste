@@ -14,10 +14,6 @@ from pathlib import Path
 import os
 import dj_database_url
 
-DATABASEA = {
-    'default': dj_database_url.config()
-}
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -100,6 +96,10 @@ WSGI_APPLICATION = 'teste.wsgi.application'
 # } 
 
 # django_heroku.settings(locals()) 
+
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
 
 # Password validation
